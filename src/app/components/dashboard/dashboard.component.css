@@ -1,0 +1,29 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: #f8f9fa;
+  padding: 16px;
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+}
+
+.mat-toolbar.mat-primary {
+  --mat-toolbar-container-background-color: #2196F3; /* Azul claro */
+  --mat-toolbar-container-text-color: white;
+}
+
+.mat-drawer-container {
+  background-color: #e7e4e4;
+  color: black;
+}
+
+.mat-drawer {
+  background-color: #2196F3;
+}
