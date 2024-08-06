@@ -3,13 +3,14 @@
     <button type="button" mat-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Gerenciador de Plantas</span>
+    <span>Gerenciador de Cobranças</span>
   </mat-toolbar-row>
 </mat-toolbar>
 
 <mat-drawer-container class="example-container">
   <mat-drawer #drawer mode="side" opened="true">
     <mat-nav-list>
+      <a mat-list-item routerLink="/pedidos">Dashboard</a>
       <a mat-list-item routerLink="/usuarios">Usuários</a>
       <a mat-list-item routerLink="/pedidos">Pedidos</a>
     </mat-nav-list>
