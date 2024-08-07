@@ -1,11 +1,11 @@
 <main id="main">
   <div class="titulo">
-    <h1>Lista de Usuarios</h1>
+    <h1>Lista de Clientes</h1>
   </div>
   <div class="container-fluid mt-5">
     <div class="d-flex justify-content mx-3">
-      <button type="button" class="btn btn-primary btn-lg mb-3">
-        <i class="bi bi-person-plus-fill"></i> Cadastrar Cliente
+      <button type="button" class="btn btn-primary btn-lg mb-3" routerLink="/usuario">
+        Cadastrar Cliente  <i class="bi bi-person-plus-fill mx-3"></i>
       </button>
     </div>
     <div class="row">
@@ -19,24 +19,18 @@
               <th>Status</th>
               <th></th>
               <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Donna R. Folse</td>
-              <td>Bairro: Campo Grande, Rua: Rua Vítor Alves, Numero:1393</td>
-              <td>2012/05/06</td>
-              <td>ativo</td>
+            <tr *ngFor="let cliente of clientes">
+              <td>{{cliente.nome}}</td>
+              <td>{{cliente.endereco}}</td>
+              <td>{{cliente.telefonePrincipal}}</td>
+              <td>{{cliente.status}}</td>
               <td><button type="button" class="btn btn-primary ">Atualizar</button></td>
-              <td><button type="button" class="btn btn-danger ">Remover</button></td>
-            </tr>
-            <tr>
-              <td>Donna R. Folse</td>
-              <td>Bairro: Campo Grande, Rua: Rua Vítor Alves, Numero:1393</td>
-              <td>2012/05/06</td>
-              <td>ativo</td>
-              <td><button type="button" class="btn btn-primary ">Atualizar</button></td>
-              <td><button type="button" class="btn btn-danger ">Remover</button></td>
+              <td><button type="button" class="btn btn-warning ">Ativar</button></td>
+              <td><button type="button" class="btn btn-danger" (click)="inativarCliente(cliente.id)">Inativar</button></td>
             </tr>
           </tbody>
         </table>

@@ -12,6 +12,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   imports: [
@@ -27,7 +31,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatInputModule,
     MatSelectModule,
     MatSnackBarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   exports: [
     MatToolbarModule,
@@ -41,7 +49,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatInputModule,
     MatSelectModule,
     MatSnackBarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule
 
   ]
 })

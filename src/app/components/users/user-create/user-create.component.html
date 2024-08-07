@@ -1,0 +1,54 @@
+<main id="main">
+  <div class="titulo">
+    <h1>Cadastrar Usuario</h1>
+  </div>
+  <div class="container-fluid">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control " [ngClass]="{'is-invalid' : eCampoInvalido('nome')}" id="nome" placeholder="Nome" formControlName="nome" required>
+          <div class="invalid-feedback">
+            Por favor adicione um nome
+          </div>
+        </div>
+        <div class="col-md-1 mx-3">
+          <label for="ddd">DDD</label>
+          <input type="text" class="form-control" id="ddd" placeholder="ddd" formControlName="ddd" [ngClass]="{'is-invalid' : eCampoInvalido('ddd')}" required>
+          <div class="invalid-feedback">
+            Por favor adicione o DDD do telefone
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="telefone">Telefone</label>
+          <input type="text" class="form-control" id="telefone" placeholder="Telefone" formControlName="telefone" [ngClass]="{'is-invalid' : eCampoInvalido('telefone')}" required>
+          <div class="invalid-feedback">
+            Por favor adicione um telefone
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="cep">CEP</label>
+          <input type="text" class="form-control" id="cep"  placeholder="CEP" formControlName="cep" [ngClass]="{'is-invalid' : eCampoInvalido('cep')}" required >
+          <div class="invalid-feedback" *ngIf="eCampoInvalido('cep')">
+            <div *ngIf="form.get('cep')?.errors?.['required'] && (form.get('cep')?.dirty || form.get('cep')?.touched)">
+              Por favor adicione um cep
+            </div>
+            <div *ngIf="form.get('cep')?.errors?.['minlength'] && (form.get('cep')?.dirty || form.get('cep')?.touched)">
+              Por favor adicione apenas numeros
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mx-3">
+          <label for="numeroCasa">Numero da casa</label>
+          <input type="text" class="form-control" id="numeroCasa"  placeholder="Numero da casa" formControlName="numeroCasa" [ngClass]="{'is-invalid' : eCampoInvalido('numeroCasa')}" required >
+          <div class="invalid-feedback">
+            Por favor adcione o numero da casa
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Enviar Cadastro</button>
+    </form>
+  </div>
+</main>

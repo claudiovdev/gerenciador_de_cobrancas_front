@@ -7,17 +7,21 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
+import { HttpClientModule } from '@angular/common/http';
+import { AlertaComponentComponent } from './shared/components/alerta-component/alerta-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AlertaComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ComponentsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

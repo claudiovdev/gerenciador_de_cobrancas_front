@@ -1,0 +1,21 @@
+#main{
+  padding: 20px 30px;
+}
+
+.form-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+
+
+
+h1{
+  font-family: "Nunito", sans-serif;
+  color: #2196F3;
+  font-weight: bold;
+}

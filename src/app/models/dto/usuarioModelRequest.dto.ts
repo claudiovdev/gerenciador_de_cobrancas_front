@@ -1,7 +1,9 @@
 
 export interface UsuarioModelRequest{
   nome: string;
-  telefone: {
+  cep: string;
+  numero: string
+  telefones: {
     ddd: string;
     numero: string;
     titular: string;
